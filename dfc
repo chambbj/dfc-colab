@@ -1,0 +1,11 @@
+#!/bin/bash
+
+echo Installing Miniconda...
+wget https://repo.continuum.io/miniconda/Miniconda3-4.5.4-Linux-x86_64.sh
+bash Miniconda3-4.5.4-Linux-x86_64.sh -bfp /usr/local
+echo Done.
+
+echo Installing dependencies...
+conda install -y -q -c conda-forge pdal
+conda install -y -q -c conda-forge tensorflow-gpu
+echo Done.
